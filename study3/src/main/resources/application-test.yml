@@ -1,0 +1,8 @@
+server:
+  port: 8888
+
+my:
+  name: Isea2
+  port: 8880
+  servers[0]: dev.bar.com
+  servers[1]: foo.bar.com
