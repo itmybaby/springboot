@@ -29,7 +29,11 @@ public class UserController {
     public User getUserDaoById(@PathVariable("id") int id) {
         return userDao.findOne(id);
     }
+    @RequestMapping(value = "/name/{name}", method = RequestMethod.GET)
+    public User getUserDaoByName(@PathVariable("name") String name) {
+         return  userDao.findByName(name);
 
+    }
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public String updateUserDao(@PathVariable("id") int id, @RequestParam(value = "name", required = true) String name,
                                 @RequestParam(value = "money", required = true) double money) {
